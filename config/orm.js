@@ -54,7 +54,12 @@ var orm = {
       // Return results in callback
       cb(result);
     });
-  }
+  },
+
+  // Function that updates a single table entry
+	updateOne: function(table, objColVals, condition, cb) {
+		// Construct the query string that updates a single entry in the target table
+		var queryString = "UPDATE " + table;
 };
 
 // export the orm back to the model burger.js
