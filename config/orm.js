@@ -29,6 +29,31 @@ var orm = {
       // send the query result back to the callback function
       cb(result);
     });
+  },
+
+  // Function that insert a single table entry
+  insertOne: function(table, cols, vals, cb) {
+    // Construct the query string that inserts a single row into the target table
+    var queryString = "INSERT INTO " + table;
+
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    // console.log(queryString);
+
+    // Perform the database query
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      // Return results in callback
+      cb(result);
+    });
   }
 };
 
