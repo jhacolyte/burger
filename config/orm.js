@@ -10,19 +10,15 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
-// another function for building queries
 function objToSql(ob) {
   var arr = [];
 
   for (var key in ob) {
-    if (ob.hasOwnProperty(key)) {
-      arr.push(key + "=" + ob[key]);
-    }
+    arr.push(key + "=" + ob[key]);
   }
 
   return arr.toString();
 }
-
 // define our orm that will be exported to the burgers.js model
 var orm = {
   // selectAll function for grabbing everything from the table
