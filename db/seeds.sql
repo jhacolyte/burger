@@ -2,6 +2,6 @@
 INSERT INTO burgers_db.burgers
     (burger_name, devoured)
 VALUES
-    ('Lasagna Burger', false),
-    ('Broccoli Burger', false),
-    ('Orang Banana Burger', false);
+    ('Adobo Burger', false),
+    ('Pancit Burger', false),
+    ('Balut Burger', false);
