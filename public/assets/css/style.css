@@ -1,0 +1,130 @@
+body {
+  background-color: #000000;
+}
+
+.jumbotron {
+  background-image: url("../img/banner.png");
+  background-size: 100% 100%;
+  padding-bottom: 150px;
+}
+
+#title,
+h3,
+h2 {
+  font-size: 80px;
+  letter-spacing: 10px;
+  color: white;
+  font-family: futura;
+  font-style: italic;
+
+  width: 100%;
+
+  margin: 0 auto;
+  text-align: center;
+
+  color: #313131;
+  font-size: 45px;
+  font-weight: bold;
+  position: static;
+  -webkit-animation: colorchange 20s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: blue;
+  }
+
+  10% {
+    color: #8e44ad;
+  }
+
+  20% {
+    color: #1abc9c;
+  }
+
+  30% {
+    color: #d35400;
+  }
+
+  40% {
+    color: blue;
+  }
+
+  50% {
+    color: #34495e;
+  }
+
+  60% {
+    color: blue;
+  }
+
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+
+  90% {
+    color: #2980b9;
+  }
+
+  100% {
+    color: pink;
+  }
+}
+
+.heading {
+  color: #e1521a;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+p {
+  padding: 5px;
+  margin: 5px;
+}
+
+.eat-icon,
+.trash-icon {
+  padding-bottom: -10px;
+  height: 30px;
+  width: 30px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#newBurger {
+  padding: 0px 10px;
+  font-size: medium;
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  font-size: 50px;
+  color: white;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-size: 22px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.btn {
+  margin-top: 15px;
+  color: black;
+}
+
+#title {
+  font-size: 85px;
+}
