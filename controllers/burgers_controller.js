@@ -6,26 +6,33 @@ var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
-    // var hbsObject = {
-    //   burgers: data
-    // };
-    console.log(data);
-    res.render("index", { burger: data });
+    var hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
   });
 });
 
+// adds a burger
 router.post("/", function(req, res) {
-  burger.insertOne(req.body.burger_name, function() {
+  console.log(req.body);
+  burger.insertOne(req.body.name, function() {
     res.redirect("/");
   });
 });
 
+// updates a burger entry
 router.put("/:id", function(req, res) {
-  var id = req.params.id;
+  console.log(req.body);
+  burger.updateOne(req.params.id, function() {
+    res.redirect("/");
+  });
+});
 
-  console.log("id", id);
-
-  burger.updateOne(id, function() {
+// deletes a burger
+router.delete("/:id", function(req, res) {
+  burger.deleteOne(req.params.id, function(result) {
     res.redirect("/");
   });
 });
