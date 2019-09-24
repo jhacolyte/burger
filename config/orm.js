@@ -6,6 +6,7 @@ var orm = {
     var query = "SELECT * FROM ??;";
     connection.query(query, [table], function(err, result) {
       if (err) throw err;
+      console.log(result);
       cb(result);
     });
   },
