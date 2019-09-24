@@ -15,5 +15,4 @@ PRIMARY KEY
     (id)
 );
 
-    select *
-    from burgers_db.burgers;
+

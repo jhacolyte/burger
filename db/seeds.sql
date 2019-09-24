@@ -1,5 +1,5 @@
 -- Insert a set of records.
-INSERT INTO burgers_db.burgers
+INSERT INTO burgers
     (burger_name, devoured)
 VALUES
     ('Adobo Burger', false),
