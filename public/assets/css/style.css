@@ -14,7 +14,7 @@ h2 {
   font-size: 80px;
   letter-spacing: 10px;
   color: white;
-  font-family: futura;
+  font-family: "Mansalva", cursive;
   font-style: italic;
 
   width: 100%;
@@ -106,6 +106,7 @@ p {
   margin-bottom: 5px;
   font-size: 35px;
   color: white;
+  font-family: "Lobster", cursive;
 }
 
 h1,

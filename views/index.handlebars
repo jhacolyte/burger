@@ -4,7 +4,7 @@
         <h3 class="heading" class="a">Feast on this!!!</h3>
         {{#each burgers}}
         {{#unless this.devoured}}
-        <form class="eat-form form-group" action="/{{this.id}}?_method=PUT" method="POST">
+        <form class="eat-form form-group animated flipInX" action="/{{this.id}}?_method=PUT" method="POST">
             {{this.burger_name}}
             <input type="hidden" name="eat" value="true">
             <input type="image" class="eat-icon animated shake infinite slow" src="assets/img/eat.png" alt="eat icon" />
@@ -15,11 +15,11 @@
 
     <div class="col-md-4 col-sm-12 col-xs-12">
         <img src="/assets/img/burger.png" class="img-responsive" alt="burger">
-        <h2 class="heading" class="animated bounce infinite">↓↓↓↓ ~ Add ~ ↓↓↓↓</h2>
+        <h2 class="heading" class="animated bounce infinite">↓↓↓ ~ Add ~ ↓↓↓</h2>
         <form class="add-burger-form" action="/" method="POST">
             <div class="form-group">
                 <input type="text" id="newBurger" name="name" placeholder="Burger name">
-                <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                <button type="submit" class="btn btn-outline-secondary">Create</button>
             </div>
         </form>
     </div>
@@ -29,7 +29,7 @@
         <div class="list-group">
             {{#each burgers}}
             {{#if this.devoured}}
-            <form class="delete-form form-group" action="/{{this.id}}?_method=DELETE" method="POST">
+            <form class="delete-form form-group animated flipInX" action="/{{this.id}}?_method=DELETE" method="POST">
                 {{this.burger_name}}
                 <input type="image" class="trash-icon animated bounce infinite slow" src="assets/img/trash.png"
                     alt="trash icon" />
